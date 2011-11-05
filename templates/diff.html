@@ -23,14 +23,40 @@
 		{% else %}
 		    <div class="span-8 last diffcolumn">
 		{% endif %}
-                <h2>{{ restaurant.name }}</h2>
-		<p class="large">Cost For Two: {{ restaurant.avgCostForTwo }}</p>
+                
+		<h2>{{ restaurant.name }}</h2>
+		<p class="large">Rs. {{ restaurant.avgCostForTwo }} for two</p>
+		<p class="large">{{ restaurant.location.locality }}
 		{% if restaurant.hasBar %}
 		<p class="large loud">
 		{% else %}
 		<p class="large quiet">
 		{% endif %}
 		   Bar
+		</p>
+		
+		{% if restaurant.hasDineIn %}
+		<p class="large loud">
+		{% else %}
+		<p class="large quiet">
+		{% endif %}
+		   Dine-In
+		</p>
+		
+		{% if restaurant.hasDelivery %}
+		<p class="large loud">
+		{% else %}
+		<p class="large quiet">
+		{% endif %}
+		   Delivery
+		</p>
+		
+		{% if restaurant.acceptsCreditCards %}
+		<p class="large loud">
+		{% else %}
+		<p class="large quiet">
+		{% endif %}
+		   Credit Cards
 		</p>
             </div>
 	    {% endfor %}

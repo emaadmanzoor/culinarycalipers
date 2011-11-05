@@ -17,13 +17,13 @@
 	<div id="header-background"></div>
         <div class="container">
 	    <div class="span-24 last prepend-top append-bottom">&nbsp;</div>
-	    {% for restaurant in restaurants %}
+	    {% for restaurant in data %}
 		{% if not forloop.last %}
 		    <div class="span-8 border diffcolumn">
 		{% else %}
 		    <div class="span-8 last diffcolumn">
 		{% endif %}
-                <h2>{{ restaurant }}</h2>
+                <h2>{{ restaurant.name }}</h2>
             </div>
 	    {% endfor %}
             <div class="span-24 last prepend-top append-bottom">&nbsp;</div>

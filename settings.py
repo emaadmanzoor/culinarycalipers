@@ -1,4 +1,4 @@
-# Django settings for calipers_django project.
+# Django settings for calipers project.
 import os
 
 DEBUG = True
@@ -73,7 +73,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    '/home/pingu/dev/calipers_django/static/',
+    '/var/www/calipers/static/',
 )
 
 # List of finder classes that know how to find static files in
@@ -102,7 +102,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = 'calipers_django.urls'
+ROOT_URLCONF = 'calipers.urls'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".

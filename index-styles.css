@@ -1,0 +1,20 @@
+.container {
+    font-family: "Times New Roman";
+}
+
+#header-background {
+    background: url("img/calipers-logo.jpg") top center no-repeat;
+    height: 160px;
+    top: 0;
+}
+
+
+#footer-background {
+    background: url("img/footer-logo.jpg") bottom center no-repeat;
+    height: 90px;
+    bottom: 0;
+}
+
+.diffcolumn {
+    text-align: center;
+}

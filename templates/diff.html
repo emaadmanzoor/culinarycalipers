@@ -17,18 +17,15 @@
 	<div id="header-background"></div>
         <div class="container">
 	    <div class="span-24 last prepend-top append-bottom">&nbsp;</div>
-            <div class="span-8 border diffcolumn">
-                <h1>{{ rest_1 }}</h1>
-                <h2>URL</h2>
+	    {% for restaurant in restaurants %}
+		{% if not forloop.last %}
+		    <div class="span-8 border diffcolumn">
+		{% else %}
+		    <div class="span-8 last diffcolumn">
+		{% endif %}
+                <h2>{{ restaurant }}</h2>
             </div>
-            <div class="span-8 border diffcolumn">
-                <h1>{{ rest_2 }}</h1>
-                <h2>URL</h2>
-            </div>
-            <div class="span-8 last diffcolumn">
-                <h1>{{ rest_3 }}</h1>
-                <h2>URL</h2>
-            </div>
+	    {% endfor %}
             <div class="span-24 last prepend-top append-bottom">&nbsp;</div>
 	</div>
 	<div id="footer-background"></div>

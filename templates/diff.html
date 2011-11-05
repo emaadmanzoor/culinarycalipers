@@ -26,7 +26,13 @@
                 
 		<h2>{{ restaurant.name }}</h2>
 		<p class="large">Rs. {{ restaurant.avgCostForTwo }} for two</p>
-		<p class="large">{{ restaurant.location.locality }}
+		<p class="large">{{ restaurant.location.locality }}</p>
+		<p class="large">{{ restaurant.timings }}</p>
+		<p class="large">{{ restaurant.cuisines }}</p>
+		<p class="large">Food: {{ restaurant.editorRating.food }}</p>
+		<p class="large">Service: {{ restaurant.editorRating.service }}</p>
+		<p class="large">Ambience: {{ restaurant.editorRating.ambience }}</p>
+		
 		{% if restaurant.hasBar %}
 		<p class="large loud">
 		{% else %}

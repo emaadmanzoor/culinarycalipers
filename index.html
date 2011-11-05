@@ -11,25 +11,29 @@
         <!--[if IE]><link rel="stylesheet" href="blueprint/ie.css" type="text/css" media="screen, projection" /><![endif]-->
 
       	<!-- Custom CSS/Scripts -->
-        <link href="index-styles.css" rel="stylesheet" type="text/css" />
+	<link href="diff-styles.css" rel="stylesheet" type="text/css" />
+	<link href="index-styles.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
 	<div id="header-background"></div>
         <div class="container">
 	    <div class="span-24 last prepend-top append-bottom">&nbsp;</div>
-            <div class="span-8 border diffcolumn">
-                <h1>Restaurant Name</h1>
-                <h2>URL</h2>
-            </div>
-            <div class="span-8 border diffcolumn">
-                <h1>Restaurant Name</h1>
-                <h2>URL</h2>
-            </div>
-            <div class="span-8 last diffcolumn">
-                <h1>Restaurant Name</h1>
-                <h2>URL</h2>
-            </div>
-            <div class="span-24 last prepend-top append-bottom">&nbsp;</div>
+	    <div class="span-24 last append-bottom"><h1 style="text-align: center">A fork in the road, ja?</h1></div>
+	    <form action="index.php">
+		<div class="span-8 diffcolumn">
+		    <input name="rest_1" type="text"/>
+		</div>
+		<div class="span-8 diffcolumn">
+		    <input name="rest_1" type="text"/>
+		</div>
+		<div class="span-8 last diffcolumn append-bottom">
+		    <input name="rest_1" type="text"/>
+		</div>
+		<div class="span-24 last diffcolumn prepend-top">
+		    <input type="submit" value="Compare"/>
+		</div>
+	    </form>
+	    <div class="span-24 last prepend-top append-bottom"><h2 class="quiet" style="text-align: center">The restaurant ID's above will be diff'd.</div>
 	</div>
 	<div id="footer-background"></div>
     </body>    

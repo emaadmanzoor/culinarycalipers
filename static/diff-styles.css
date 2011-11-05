@@ -18,3 +18,16 @@
 .diffcolumn {
     text-align: center;
 }
+
+.diffcolumn h2 {
+    color: white;
+    background-color: #000000;
+}
+
+.loud {
+    font-weight: bolder;
+}
+
+p {
+    border-bottom: 1px solid #CCC;
+}

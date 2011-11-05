@@ -24,6 +24,14 @@
 		    <div class="span-8 last diffcolumn">
 		{% endif %}
                 <h2>{{ restaurant.name }}</h2>
+		<p class="large">Cost For Two: {{ restaurant.avgCostForTwo }}</p>
+		{% if restaurant.hasBar %}
+		<p class="large loud">
+		{% else %}
+		<p class="large quiet">
+		{% endif %}
+		   Bar
+		</p>
             </div>
 	    {% endfor %}
             <div class="span-24 last prepend-top append-bottom">&nbsp;</div>

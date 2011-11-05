@@ -5,29 +5,29 @@
 	<title>Culinary Calipers | A Gastric Comparator Experiment</title>
 	
 	<!-- Framework CSS -->
-      	<link rel="stylesheet" href="blueprint/screen.css" type="text/css" media="screen, projection" />
-      	<link rel="stylesheet" href="blueprint/print.css" type="text/css" media="print" />
-        <link rel="stylesheet" href="blueprint/typography.css" type="text/css" media="print" />
+      	<link rel="stylesheet" href="/static/blueprint/screen.css" type="text/css" media="screen, projection" />
+      	<link rel="stylesheet" href="/static/blueprint/print.css" type="text/css" media="print" />
+        <link rel="stylesheet" href="/static/blueprint/typography.css" type="text/css" media="print" />
         <!--[if IE]><link rel="stylesheet" href="blueprint/ie.css" type="text/css" media="screen, projection" /><![endif]-->
 
       	<!-- Custom CSS/Scripts -->
-	<link href="diff-styles.css" rel="stylesheet" type="text/css" />
-	<link href="index-styles.css" rel="stylesheet" type="text/css" />
+	<link href="/static/diff-styles.css" rel="stylesheet" type="text/css" />
+	<link href="/static/index-styles.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
 	<div id="header-background"></div>
         <div class="container">
 	    <div class="span-24 last prepend-top append-bottom">&nbsp;</div>
 	    <div class="span-24 last append-bottom"><h1 style="text-align: center">A fork in the road, ja?</h1></div>
-	    <form action="index.php">
+	    <form action="diff">
 		<div class="span-8 diffcolumn">
 		    <input name="rest_1" type="text"/>
 		</div>
 		<div class="span-8 diffcolumn">
-		    <input name="rest_1" type="text"/>
+		    <input name="rest_2" type="text"/>
 		</div>
 		<div class="span-8 last diffcolumn append-bottom">
-		    <input name="rest_1" type="text"/>
+		    <input name="rest_3" type="text"/>
 		</div>
 		<div class="span-24 last diffcolumn prepend-top">
 		    <input type="submit" value="Compare"/>

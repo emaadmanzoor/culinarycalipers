@@ -51,5 +51,5 @@ def get_permalink(request):
     rankfile.close()
     
     params = request.GET.urlencode()
-    permalink = "http://localhost:8000/diff/?" + params
+    permalink = "http://" + request.get_host() + "/diff/?" + params
     return render_to_response('permalink.html', {"permalink" : permalink})

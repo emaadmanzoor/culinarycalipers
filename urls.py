@@ -1,5 +1,5 @@
 from django.conf.urls.defaults import patterns, include, url
-from calipers.views import index, diff
+from calipers.views import index, diff, get_permalink
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 # Uncomment the next two lines to enable the admin:
@@ -17,7 +17,8 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
     (r'^$', index),
-    (r'^diff/$', diff)
+    (r'^diff/$', diff),
+    (r'^diff/get_permalink/$', get_permalink),
 )
 
 urlpatterns += staticfiles_urlpatterns()

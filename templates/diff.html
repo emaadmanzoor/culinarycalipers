@@ -17,55 +17,68 @@
 	<div id="header-background"></div>
         <div class="container">
 	    <div class="span-24 last prepend-top append-bottom">&nbsp;</div>
-	    {% for restaurant in data %}
+	    <form action="get_permalink">
+	    {% for restaurant, rating in data %}
 		{% if not forloop.last %}
 		    <div class="span-8 border diffcolumn">
 		{% else %}
 		    <div class="span-8 last diffcolumn">
 		{% endif %}
-                
-		<h2>{{ restaurant.name }}</h2>
-		<p class="large">Rs. {{ restaurant.avgCostForTwo }} for two</p>
-		<p class="large">{{ restaurant.location.locality }}</p>
-		<p class="large">{{ restaurant.timings }}</p>
-		<p class="large">{{ restaurant.cuisines }}</p>
-		<p class="large">Food: {{ restaurant.editorRating.food }}</p>
-		<p class="large">Service: {{ restaurant.editorRating.service }}</p>
-		<p class="large">Ambience: {{ restaurant.editorRating.ambience }}</p>
-		
-		{% if restaurant.hasBar %}
-		<p class="large loud">
-		{% else %}
-		<p class="large quiet">
-		{% endif %}
-		   Bar
-		</p>
-		
-		{% if restaurant.hasDineIn %}
-		<p class="large loud">
-		{% else %}
-		<p class="large quiet">
-		{% endif %}
-		   Dine-In
-		</p>
-		
-		{% if restaurant.hasDelivery %}
-		<p class="large loud">
-		{% else %}
-		<p class="large quiet">
-		{% endif %}
-		   Delivery
-		</p>
-		
-		{% if restaurant.acceptsCreditCards %}
-		<p class="large loud">
-		{% else %}
-		<p class="large quiet">
-		{% endif %}
-		   Credit Cards
-		</p>
+		    <input type="hidden" name="rest_{{ forloop.counter }}" value="{{ restaurant.id }}"/>
+		    <h2>{{ restaurant.name }}</h2>
+		    <p class="large">Rs. {{ restaurant.avgCostForTwo }} for two</p>
+		    <p class="large">{{ restaurant.location.locality }}</p>
+		    <p class="large">{{ restaurant.timings }}</p>
+		    <p class="large">{{ restaurant.cuisines }}</p>
+		    <p class="large">Food: {{ restaurant.editorRating.food }}</p>
+		    <p class="large">Service: {{ restaurant.editorRating.service }}</p>
+		    <p class="large">Ambience: {{ restaurant.editorRating.ambience }}</p>
+		    
+		    {% if restaurant.hasBar %}
+		    <p class="large loud">
+		    {% else %}
+		    <p class="large quiet">
+		    {% endif %}
+		       Bar
+		    </p>
+		    
+		    {% if restaurant.hasDineIn %}
+		    <p class="large loud">
+		    {% else %}
+		    <p class="large quiet">
+		    {% endif %}
+		       Dine-In
+		    </p>
+		    
+		    {% if restaurant.hasDelivery %}
+		    <p class="large loud">
+		    {% else %}
+		    <p class="large quiet">
+		    {% endif %}
+		       Delivery
+		    </p>
+		    
+		    {% if restaurant.acceptsCreditCards %}
+		    <p class="large loud">
+		    {% else %}
+		    <p class="large quiet">
+		    {% endif %}
+		       Credit Cards
+		    </p>
+		    
+		    <p class="large loud">
+		    {% ifequal rating -1 %}
+			<input type="text" name="rating_{{ forloop.counter }}" value="{{ rating }}"/>%
+		    {% else %}
+			{{ rating }}%
+		    {% endifequal %}
+		    </p>
             </div>
 	    {% endfor %}
+	    {% if not loaded %}
+	    	<div class="span-24 last" style="text-align: center"><input type="submit" value="Save"/></div>
+	    {% endif %}
+	    </form>
             <div class="span-24 last prepend-top append-bottom">&nbsp;</div>
 	</div>
 	<div id="footer-background"></div>

@@ -1,9 +1,6 @@
 Culinary Calipers
 =================
 
-*A collaborative comparision based restaurant
-ranking experiment.*
-
 We built this for the Pluggd.in hackathon, and
 it's been a work-in-progress since.
 
